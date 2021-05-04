@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 500; */
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.marker {
+    background-image: url('assets/icons/camera.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#abscard {
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    z-index: 999;
+    position: absolute;
+    margin: 30px;
+    /* border: 0.5px solid #d6d6d6; */
+    /* box-shadow: 2px 2px #0000000f; */
+    border-radius: 2px;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 65%);
+}
+
+#abscard img {
+    height: auto;
+    width: 100%;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 65%);
+}
+
+#abscard h3{
+    font-size: 12px;
+    margin-top: 0;
+}
+
+#abscard i {
+    font-size: 16px;
+    margin-bottom: 5px !important;
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 5px !important;
+}
+
+.caption{
+    font-size: 11px;
+    margin-top: 10;
+}

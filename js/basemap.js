@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------- */
+/*                                load basemap                                */
+/* -------------------------------------------------------------------------- */
+
+const map = L.map('map').setView([
+    -0.040, 109.356
+], 14.2);
+let layer = L.esri.basemapLayer('DarkGray').addTo(map);
+let layerLabels;
+
+function setBasemap(basemap) {
+    if (layer) {
+        map.removeLayer(layer);
+    }
+    layer = L.esri.basemapLayer(basemap);
+    map.addLayer(layer);
+    if (layerLabels) {
+        map.removeLayer(layerLabels);
+    }
+
+    if (basemap === 'ShadedRelief' || basemap === 'Oceans' || basemap === 'Gray' || basemap === 'DarkGray' ||
+        basemap === 'Imagery' || basemap === 'Terrain') {
+
+        layerLabels = L.esri.basemapLayer(basemap + 'Labels');
+        map.addLayer(layerLabels);
+    }
+}
+
+let basemaps = document.getElementById('basemaps');
+
+basemaps.addEventListener('change', function () {
+    setBasemap(basemaps.value);
+});
+
+/* -------------------------------------------------------------------------- */
+/*                               GEOJSON Section                              */
+/* -------------------------------------------------------------------------- */

@@ -5,7 +5,7 @@
 const map = L.map('map').setView([
     -0.040, 109.356
 ], 14.2);
-let layer = L.esri.basemapLayer('DarkGray').addTo(map);
+let layer = L.esri.basemapLayer('Topographic').addTo(map);
 let layerLabels;
 
 function setBasemap(basemap) {

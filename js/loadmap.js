@@ -22,7 +22,7 @@ let file = $.ajax({
 $.when(file).done(function () {
     let layer = file.responseJSON
     function onEachFeature(feature, layer) {
-        layer.on('click', function (e) {
+        layer.on('mouseover', function (e) {
             let container = document.getElementById('abscard')
             container.innerHTML =
              `
@@ -45,7 +45,6 @@ $.when(file).done(function () {
             `
         });
     }
-
 
 
     let layers = L.geoJSON(layer, {
